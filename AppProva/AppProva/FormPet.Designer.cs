@@ -49,7 +49,6 @@
             this.tbBuscarPets = new System.Windows.Forms.TabPage();
             this.dtAnimais = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -295,7 +294,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtAnimais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtAnimais.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column8,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -324,12 +322,6 @@
             this.textBox1.Size = new System.Drawing.Size(703, 24);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Id";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
             // 
             // Column1
             // 
@@ -431,7 +423,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dtAnimais;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

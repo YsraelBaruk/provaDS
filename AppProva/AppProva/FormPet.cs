@@ -16,6 +16,7 @@ namespace AppProva
         public FormPet()
         {
             InitializeComponent();
+            carregarDt();
         }
 
         private void carregarDt()
@@ -27,21 +28,22 @@ namespace AppProva
             {
                 foreach (DataRow linha in listaAnimais.Rows)
                 {
-                    dtAnimais.Rows.Add(linha[1], linha[2], linha[3], linha[4], linha[5], linha[6], linha[7], linha[8]);
+                    dtAnimais.Rows.Add(linha[1], linha[2], linha[3], linha[4], linha[5], linha[6], linha[7]);
                 }
             }
         }
 
-        private void barraBusca(string busca)
+        private void barraBusca()
         {
             dtAnimais.Rows.Clear();
+            string busca = textBox1.Text;
             string cmdSql = $"CALL `petSelectDt`('{busca}');";
             DataTable listaAnimais = Program.cx.SELECT(cmdSql);
             if (listaAnimais != null)
             {
                 foreach (DataRow linha in listaAnimais.Rows)
                 {
-                    dtAnimais.Rows.Add(linha[1], linha[2], linha[3], linha[4], linha[5], linha[6], linha[7], linha[8]);
+                    dtAnimais.Rows.Add(linha[1], linha[2], linha[3], linha[4], linha[5], linha[6], linha[7]);
                 }
             }
         }
@@ -87,7 +89,7 @@ namespace AppProva
             string nome = txtNome.Text;
             string especie = cbEspecie.Text;
             string animal = cbAnimal.Text;
-            string date = dtpDataNasc.Text;
+            DateTime date = Convert.ToDateTime(dtpDataNasc.Text);
             //double peso = txtPeso.Text;
             double peso = Convert.ToDouble(txtPeso.Text);
             int vacinado = radioButton2.Checked? 0 : 0;
@@ -112,8 +114,7 @@ namespace AppProva
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            string busca = textBox1.Text;
-            barraBusca(busca);
+            barraBusca();
         }
     }
 }
