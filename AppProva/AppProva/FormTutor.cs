@@ -22,6 +22,7 @@ namespace AppProva
         private void carregarDt()
         {
             dtTutor.Rows.Clear();
+            //string cmdSql = "CALL `tutorSelect`()";
             string cmdSql = "CALL `tutorSelect`()";
             DataTable listaTutor = Program.cx.SELECT(cmdSql);
             if (listaTutor != null)
@@ -33,6 +34,11 @@ namespace AppProva
             }
         }
 
+        private void buscaTutor()
+        {
+
+        }
+
         private void btnCadastrr_Click(object sender, EventArgs e)
         {
             //tutor.cep, tutor.uf, tutor.cidade, tutor.bairro, tutor.logradouro, tutor.numero
@@ -40,7 +46,7 @@ namespace AppProva
             string nome = txtNome.Text;
             string tel = txtTelefone.Text;
             string email = txtEmail.Text;
-            DateTime date = Convert.ToDateTime(dtDataNasc.Text);            
+            DateTime date = Convert.ToDateTime(dtDataNasc.Text);
             string cep = txtCEP.Text;
             string uf = cbUF.Text;
             string cidade = txtCidade.Text;
@@ -48,7 +54,7 @@ namespace AppProva
             string logra = txtLogradouro.Text;
             string numero = txtNumero.Text;
 
-            string cmdSql = $"CALL tutorInsert('{cpf}', '{nome}', '{tel}', '{email}', '{date}', '{cep}', '{uf}', '{cidade}', '{bairro}', '{logra}', '{numero}')";
+            string cmdSql = $"CALL tutorInsert('{cpf}', '{nome}', '{tel}', '{email}', '{date.ToString("yyyy-mm-dd")}', '{cep}', '{uf}', '{cidade}', '{bairro}', '{logra}', '{numero}')";
 
             if (Program.cx.INSERT(cmdSql) > 0)
             {
@@ -92,6 +98,11 @@ namespace AppProva
                 txtBusca.Text = "Busque aqui...";
                 txtBusca.ForeColor = Color.DarkGray;
             }
+        }
+
+        private void TxtBusca_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

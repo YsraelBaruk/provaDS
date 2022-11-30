@@ -9,7 +9,6 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `petSelectDt`(IN `buscar` VARCHAR(100))
 SELECT * FROM pet 
 WHERE
-pet.Id LIKE concat('%',busca,'%') OR
 pet.nome LIKE concat('%',busca,'%') OR
 pet.especie LIKE concat('%',busca,'%') OR
 pet.animal LIKE concat('%',busca,'%') OR
@@ -30,5 +29,10 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `tutorInsert`(IN `_cpf` VARCHAR(20), IN `_nome` VARCHAR(100), IN `_telefone` VARCHAR(100), IN `_email` VARCHAR(100), IN `_date` DATE, IN `_cep` VARCHAR(20), IN `_uf` CHAR(2), IN `_cidade` VARCHAR(100), IN `_bairro` VARCHAR(100), IN `_logradouro` VARCHAR(100), IN `_numero` INT)
 INSERT INTO tutor (tutor.cpf, tutor.nome, tutor.telefone, tutor.email, tutor.data_nasc, tutor.cep, tutor.uf, tutor.cidade, tutor.bairro, tutor.logradouro, tutor.numero) VALUES (_cpf, _nome, _telefone, _email, _date, _cep, _uf, _cidade, _bairro, _logradouro, _numero)$$
 DELIMITER ;
+
+-- tutor SELECT
+SELECT tutor.Id, tutor.cpf, tutor.nome, tutor.telefone, tutor.email, TIMESTAMPDIFF(YEAR, tutor.data_nasc, CURDATE()) as 'Idade',
+concat(tutor.cidade,', ',tutor.bairro,', ',tutor.logradouro,', ',tutor.numero) AS 'Endereço'
+FROM tutor
 
 --CONCAT([TABELA DE VENDEDORES].MATRICULA, ' ;  ',  [TABELA DE VENDEDORES].[NOME]) 

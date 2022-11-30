@@ -57,13 +57,13 @@
             this.btnCadastrr = new System.Windows.Forms.Button();
             this.tbConsultarTutor = new System.Windows.Forms.TabPage();
             this.dtTutor = new System.Windows.Forms.DataGridView();
-            this.txtBusca = new System.Windows.Forms.TextBox();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.tbcTutor.SuspendLayout();
             this.tbCadastrar.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -78,7 +78,7 @@
             this.tbcTutor.Controls.Add(this.tbConsultarTutor);
             this.tbcTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbcTutor.Location = new System.Drawing.Point(9, 10);
-            this.tbcTutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcTutor.Margin = new System.Windows.Forms.Padding(2);
             this.tbcTutor.Name = "tbcTutor";
             this.tbcTutor.SelectedIndex = 0;
             this.tbcTutor.Size = new System.Drawing.Size(647, 483);
@@ -90,9 +90,9 @@
             this.tbCadastrar.Controls.Add(this.groupBox1);
             this.tbCadastrar.Controls.Add(this.btnCadastrr);
             this.tbCadastrar.Location = new System.Drawing.Point(4, 26);
-            this.tbCadastrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.tbCadastrar.Name = "tbCadastrar";
-            this.tbCadastrar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCadastrar.Padding = new System.Windows.Forms.Padding(2);
             this.tbCadastrar.Size = new System.Drawing.Size(639, 453);
             this.tbCadastrar.TabIndex = 0;
             this.tbCadastrar.Text = "Cadastrar";
@@ -111,9 +111,9 @@
             this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(4, 5);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(290, 340);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
@@ -123,7 +123,7 @@
             // 
             this.dtDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDataNasc.Location = new System.Drawing.Point(26, 301);
-            this.dtDataNasc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtDataNasc.Margin = new System.Windows.Forms.Padding(2);
             this.dtDataNasc.Name = "dtDataNasc";
             this.dtDataNasc.Size = new System.Drawing.Size(128, 24);
             this.dtDataNasc.TabIndex = 32;
@@ -141,7 +141,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(26, 235);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(244, 24);
             this.txtEmail.TabIndex = 30;
@@ -159,7 +159,7 @@
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(26, 172);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(244, 24);
             this.txtTelefone.TabIndex = 28;
@@ -167,7 +167,7 @@
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(26, 45);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(2);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(244, 24);
             this.txtCpf.TabIndex = 27;
@@ -195,7 +195,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(26, 102);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(244, 24);
             this.txtNome.TabIndex = 24;
@@ -225,9 +225,9 @@
             this.groupBox1.Controls.Add(this.txtLogradouro);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(315, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(290, 340);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
@@ -236,7 +236,7 @@
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(11, 102);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(2);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(265, 24);
             this.txtCidade.TabIndex = 37;
@@ -284,7 +284,7 @@
             "SE - Sergipe",
             "TO - Tocantins"});
             this.cbUF.Location = new System.Drawing.Point(184, 43);
-            this.cbUF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbUF.Margin = new System.Windows.Forms.Padding(2);
             this.cbUF.Name = "cbUF";
             this.cbUF.Size = new System.Drawing.Size(92, 25);
             this.cbUF.TabIndex = 35;
@@ -302,7 +302,7 @@
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(11, 172);
-            this.txtBairro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBairro.Margin = new System.Windows.Forms.Padding(2);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(265, 24);
             this.txtBairro.TabIndex = 31;
@@ -320,7 +320,7 @@
             // txtCEP
             // 
             this.txtCEP.Location = new System.Drawing.Point(11, 43);
-            this.txtCEP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCEP.Margin = new System.Windows.Forms.Padding(2);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(152, 24);
             this.txtCEP.TabIndex = 29;
@@ -338,7 +338,7 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(11, 301);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(78, 24);
             this.txtNumero.TabIndex = 27;
@@ -356,7 +356,7 @@
             // txtLogradouro
             // 
             this.txtLogradouro.Location = new System.Drawing.Point(11, 235);
-            this.txtLogradouro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLogradouro.Margin = new System.Windows.Forms.Padding(2);
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(265, 24);
             this.txtLogradouro.TabIndex = 25;
@@ -374,7 +374,7 @@
             // btnCadastrr
             // 
             this.btnCadastrr.Location = new System.Drawing.Point(30, 388);
-            this.btnCadastrr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCadastrr.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastrr.Name = "btnCadastrr";
             this.btnCadastrr.Size = new System.Drawing.Size(574, 47);
             this.btnCadastrr.TabIndex = 8;
@@ -387,9 +387,9 @@
             this.tbConsultarTutor.Controls.Add(this.dtTutor);
             this.tbConsultarTutor.Controls.Add(this.txtBusca);
             this.tbConsultarTutor.Location = new System.Drawing.Point(4, 26);
-            this.tbConsultarTutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbConsultarTutor.Margin = new System.Windows.Forms.Padding(2);
             this.tbConsultarTutor.Name = "tbConsultarTutor";
-            this.tbConsultarTutor.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbConsultarTutor.Padding = new System.Windows.Forms.Padding(2);
             this.tbConsultarTutor.Size = new System.Drawing.Size(639, 453);
             this.tbConsultarTutor.TabIndex = 1;
             this.tbConsultarTutor.Text = "Consultar tutores";
@@ -411,27 +411,13 @@
             this.Column5,
             this.Column6});
             this.dtTutor.Location = new System.Drawing.Point(4, 32);
-            this.dtTutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtTutor.Margin = new System.Windows.Forms.Padding(2);
             this.dtTutor.Name = "dtTutor";
             this.dtTutor.ReadOnly = true;
             this.dtTutor.RowHeadersWidth = 51;
             this.dtTutor.RowTemplate.Height = 24;
             this.dtTutor.Size = new System.Drawing.Size(631, 418);
             this.dtTutor.TabIndex = 1;
-            // 
-            // txtBusca
-            // 
-            this.txtBusca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusca.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtBusca.Location = new System.Drawing.Point(4, 5);
-            this.txtBusca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(633, 24);
-            this.txtBusca.TabIndex = 0;
-            this.txtBusca.Text = "Busque aqui...";
-            this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
-            this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);
             // 
             // Column2
             // 
@@ -481,13 +467,28 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // txtBusca
+            // 
+            this.txtBusca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBusca.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtBusca.Location = new System.Drawing.Point(4, 5);
+            this.txtBusca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(633, 24);
+            this.txtBusca.TabIndex = 0;
+            this.txtBusca.Text = "Busque aqui...";
+            this.txtBusca.TextChanged += new System.EventHandler(this.TxtBusca_TextChanged);
+            this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
+            this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);
+            // 
             // FormTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 500);
             this.Controls.Add(this.tbcTutor);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormTutor";
             this.Text = "Tutor";
             this.Load += new System.EventHandler(this.FormTutor_Load);

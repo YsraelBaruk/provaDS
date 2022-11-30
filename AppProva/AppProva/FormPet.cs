@@ -33,7 +33,7 @@ namespace AppProva
             }
         }
 
-        private void barraBusca()
+        private void buscaPet()
         {
             dtAnimais.Rows.Clear();
             string busca = textBox1.Text;
@@ -99,7 +99,7 @@ namespace AppProva
             }
             string sobre = txtSobre.Text;
 
-            string cmdSql = $"CALL petInsert('{nome}', '{especie}', '{animal}', '{date}', '{peso}', '{vacinado}', '{sobre}')";
+            string cmdSql = $"CALL petInsert('{nome}', '{especie}', '{animal}', '{date.ToString("yyyy-MM-dd")}', '{peso}', '{vacinado}', '{sobre}')";
 
             if (Program.cx.INSERT(cmdSql) > 0)
             {
@@ -114,7 +114,7 @@ namespace AppProva
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            barraBusca();
+            buscaPet();
         }
     }
 }
