@@ -16,7 +16,6 @@ namespace AppProva
         public FormTutor()
         {
             InitializeComponent();
-            carregarDt();
         }
 
         private void carregarDt()
@@ -36,7 +35,16 @@ namespace AppProva
 
         private void buscaTutor()
         {
-
+            dtTutor.Rows.Clear();
+            string cmdSql = $"CALL tutorSelectDt('{txtBusca.Text}')";
+            DataTable listaTutor = Program.cx.SELECT(cmdSql);
+            if (listaTutor != null)
+            {
+                foreach (DataRow linha in listaTutor.Rows)
+                {
+                    dtTutor.Rows.Add(linha[1], linha[2], linha[3], linha[4], linha[5], linha[6]);
+                }
+            }
         }
 
         private void btnCadastrr_Click(object sender, EventArgs e)
@@ -69,6 +77,7 @@ namespace AppProva
 
         private void FormTutor_Load(object sender, EventArgs e)
         {
+            carregarDt();
             tbcTutor.Size = new Size(ClientSize.Width - 15, ClientSize.Height - 15);
             dtTutor.Size = new Size(ClientSize.Width - 20, ClientSize.Height - 30);            
 
@@ -102,7 +111,7 @@ namespace AppProva
 
         private void TxtBusca_TextChanged(object sender, EventArgs e)
         {
-
+            buscaTutor();
         }
     }
 }

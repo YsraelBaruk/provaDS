@@ -16,13 +16,12 @@ namespace AppProva
         public FormPet()
         {
             InitializeComponent();
-            carregarDt();
         }
 
         private void carregarDt()
         {
             dtAnimais.Rows.Clear();
-            string cmdSql = "CALL `petSelect`()";
+            string cmdSql = "SELECT * FROM pet";
             DataTable listaAnimais = Program.cx.SELECT(cmdSql);
             if (listaAnimais != null)
             {
@@ -36,8 +35,7 @@ namespace AppProva
         private void buscaPet()
         {
             dtAnimais.Rows.Clear();
-            string busca = textBox1.Text;
-            string cmdSql = $"CALL `petSelectDt`('{busca}');";
+            string cmdSql = $"CALL petSelectDt('{textBox1.Text}');";
             DataTable listaAnimais = Program.cx.SELECT(cmdSql);
             if (listaAnimais != null)
             {
@@ -57,6 +55,7 @@ namespace AppProva
         List<string[]> animais;
         private void FormAdocao_Load(object sender, EventArgs e)
         {
+            carregarDt();
             tbcCadastrar.Size = new Size(ClientSize.Width - 15, ClientSize.Height - 15);
             dtAnimais.Size = new Size(ClientSize.Width - 20, ClientSize.Height - 30);
 
@@ -90,7 +89,6 @@ namespace AppProva
             string especie = cbEspecie.Text;
             string animal = cbAnimal.Text;
             DateTime date = Convert.ToDateTime(dtpDataNasc.Text);
-            //double peso = txtPeso.Text;
             double peso = Convert.ToDouble(txtPeso.Text);
             int vacinado = radioButton2.Checked? 0 : 0;
             if (rbVacinadoSim.Checked)
