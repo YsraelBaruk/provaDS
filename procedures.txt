@@ -1,0 +1,34 @@
+-- pet SELECT
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `petSelect`()
+SELECT * FROM pet$$
+DELIMITER ;
+
+-- pet SELECT buscar pelo nome [aqui rafael silva]
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `petSelectDt`(IN `buscar` VARCHAR(100))
+SELECT * FROM pet 
+WHERE
+pet.Id LIKE concat('%',busca,'%') OR
+pet.nome LIKE concat('%',busca,'%') OR
+pet.especie LIKE concat('%',busca,'%') OR
+pet.animal LIKE concat('%',busca,'%') OR
+pet.data_nasc LIKE concat('%',busca,'%') OR
+pet.peso LIKE concat('%',busca,'%') OR
+pet.vacinado LIKE concat('%',busca,'%') OR
+pet.sobre LIKE concat('%',busca,'%')$$
+DELIMITER ;
+
+-- pet INSERT
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `petInsert`(IN `_nome` VARCHAR(100), IN `_especie` VARCHAR(100), IN `_animal` VARCHAR(100), IN `_date` DATE, IN `_peso` DOUBLE, IN `_vacinado` SMALLINT(6), IN `_sobre` VARCHAR(100))
+INSERT INTO pet (pet.nome, pet.especie, pet.animal, pet.data_nasc, pet.peso, pet.vacinado, pet.sobre) VALUES (_nome, _especie, _animal, _date, _peso, _vacinado, _sobre)$$
+DELIMITER ;
+
+-- tutor INSERT
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `tutorInsert`(IN `_cpf` VARCHAR(20), IN `_nome` VARCHAR(100), IN `_telefone` VARCHAR(100), IN `_email` VARCHAR(100), IN `_date` DATE, IN `_cep` VARCHAR(20), IN `_uf` CHAR(2), IN `_cidade` VARCHAR(100), IN `_bairro` VARCHAR(100), IN `_logradouro` VARCHAR(100), IN `_numero` INT)
+INSERT INTO tutor (tutor.cpf, tutor.nome, tutor.telefone, tutor.email, tutor.data_nasc, tutor.cep, tutor.uf, tutor.cidade, tutor.bairro, tutor.logradouro, tutor.numero) VALUES (_cpf, _nome, _telefone, _email, _date, _cep, _uf, _cidade, _bairro, _logradouro, _numero)$$
+DELIMITER ;
+
+--CONCAT([TABELA DE VENDEDORES].MATRICULA, ' ;  ',  [TABELA DE VENDEDORES].[NOME]) 
