@@ -4,9 +4,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `petSelect`()
 SELECT * FROM pet$$
 DELIMITER ;
 
--- pet SELECT buscar pelo nome [aqui rafael silva]
+-- pet SELECT
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `petSelectDt`(IN `buscar` VARCHAR(100))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `petSelectDt`(IN `busca` VARCHAR(100))
 SELECT * FROM pet 
 WHERE
 pet.nome LIKE concat('%',busca,'%') OR
